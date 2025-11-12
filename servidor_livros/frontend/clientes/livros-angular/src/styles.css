@@ -1,0 +1,86 @@
+/* Estilos Gerais (Tema Claro Padrão) */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Fundo muito claro */
+    color: #212529; /* Texto padrão */
+}
+
+/* Compensação de Margem para Navbar Fixa */
+/* Usada no HTML: padding-top: 56px */
+
+/* Container Principal do Conteúdo */
+.container-custom {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Configuração da Navbar (FUNDO PRETO FIXO) */
+.navbar-custom {
+    /* O bg-dark do HTML já torna o fundo preto */
+    border-bottom: 3px solid #dc3545; /* Borda Inferior Vermelha para destaque */
+}
+
+/* Estilo do Título na Navbar (Dourado no fundo preto) */
+.navbar-brand {
+    color: #ffffff !important; /* Título Branco no fundo preto */
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Estilo dos Links de Navegação (Abas/Botões Vermelhos) */
+.nav-link {
+    color: #000000 !important;
+    background-color: #dc3545; /* Vermelho Forte */
+    font-weight: 600;
+    border: 1px solid #dc3545; /* Borda Vermelha */
+    border-radius: 6px; 
+    padding: 6px 12px;
+    transition: all 0.3s;
+    margin-left: 8px; /* Espaçamento entre os botões */
+}
+.nav-link:hover {
+    color: #ffffff !important; /* Texto branco no hover */
+    background-color: #dc3545; /* Fundo vermelho no hover */
+    text-decoration: none;
+    border-color: #c82333;
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.5);
+}
+
+/* Estilo da Tabela */
+.table-custom {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.table-custom th {
+    background-color: #4b30a9 !important; /* Roxo para o cabeçalho da tabela */
+    color: #ffffff; 
+}
+
+/* Botão Salvar (Roxo Profundo) */
+.btn-primary {
+    /* CORREÇÃO: Cor Vermelha Pura, conforme última instrução */
+    background-color: #dc3545 !important; 
+    border-color: #000000 !important;
+    transition: all 0.3s;
+    width: 100%; /* Mobile First: Botão em largura total */
+}
+.btn-primary:hover {
+    background-color: #066fd1 !important;
+    border-color: #000000 !important;
+}
+
+/* Botão Excluir (Vermelho) */
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #000000 !important;
+    transition: all 0.3s;
+}
+.btn-danger:hover {
+    background-color: #066fd1 !important;
+    border-color: #000000 !important;
+}

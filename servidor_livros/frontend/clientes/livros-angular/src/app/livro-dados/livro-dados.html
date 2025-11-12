@@ -1,0 +1,71 @@
+<main class="container my-5 container-custom">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h1 class="text-center mb-4 h1-custom">Inclusão de Livros</h1>
+
+      <!-- ngNativeValidate usa validação nativa do HTML5 -->
+      <form (ngSubmit)="incluir()" ngNativeValidate>
+
+        <!-- Campo Título -->
+        <div class="mb-3">
+          <label for="titulo" class="form-label">Título</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="titulo" 
+            [(ngModel)]="livro.titulo" 
+            name="titulo" 
+            required
+          >
+        </div>
+
+        <!-- Campo Resumo -->
+        <div class="mb-3">
+          <label for="resumo" class="form-label">Resumo</label>
+          <textarea 
+            class="form-control" 
+            id="resumo" 
+            rows="3" 
+            [(ngModel)]="livro.resumo" 
+            name="resumo"
+          ></textarea>
+        </div>
+
+        <!-- Lista de Seleção (Combo) para Editoras -->
+        <div class="mb-3">
+          <label for="editora" class="form-label">Editora</label>
+          <select 
+            class="form-select" 
+            id="editora" 
+            [(ngModel)]="livro.codEditora" 
+            name="codEditora" 
+            required
+          >
+            <option [ngValue]="0" disabled>Selecione uma editora</option>
+            <option 
+              *ngFor="let editora of editoras" 
+              [ngValue]="editora.codEditora"
+            >
+              {{ editora.nome }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Campo Autores -->
+        <div class="mb-3">
+          <label for="autores" class="form-label">Autores (1 por linha)</label>
+          <textarea 
+            class="form-control" 
+            id="autores" 
+            rows="4" 
+            [(ngModel)]="autoresForm" 
+            name="autores"
+          ></textarea>
+        </div>
+
+        <!-- Botão de Submissão -->
+        <button type="submit" class="btn btn-primary">Salvar Livro</button>
+      </form>
+    </div>
+  </div>
+</main>
